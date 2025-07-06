@@ -116,12 +116,13 @@ nav ul li a:hover {
 }
 
 .hero-logo {
-  width: 60%;
-  max-width: 400px;      /* or adjust to 300px or 350px */
-  max-height: 120px;     /* controls how tall it can get */
+  width: 40%;              /* reduce overall width */
+  max-width: 300px;        /* cap size on large screens */
+  max-height: 90px;        /* shrink vertical size */
   display: block;
-  margin: 20px auto;
-  border-radius: 8px;
-  object-fit: contain;   /* keeps aspect ratio without cropping */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 16px auto;
+  border-radius: 6px;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
