@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy Generator - Privlo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background-color: #f4f4f4; }
+    h1 { color: #2d2d2d; }
+    label { display: block; margin-top: 1rem; }
+    input, textarea { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+    button { margin-top: 1rem; padding: 0.6rem 1.2rem; background: #007BFF; color: white; border: none; cursor: pointer; }
+    pre { background: #fff; padding: 1rem; border: 1px solid #ccc; margin-top: 1rem; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy Generator</h1>
+
+  <label for="companyName">Company Name:</label>
+  <input type="text" id="companyName">
+
+  <label for="email">Contact Email:</label>
+  <input type="email" id="email">
+
+  <label for="website">Website URL:</label>
+  <input type="text" id="website">
+
+  <button onclick="generatePolicy()">Generate Privacy Policy</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function generatePolicy() {
+      const name = document.getElementById('companyName').value;
+      const email = document.getElementById('email').value;
+      const website = document.getElementById('website').value;
+
+      const policy = `
+Privacy Policy for ${name}
+
+At ${name}, accessible from ${website}, one of our main priorities is the privacy of our users. This Privacy Policy document contains types of information that is collected and recorded by us and how we use it.
+
+If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at ${email}.
+
+Information We Collect:
+- Personal data (e.g., name, email)
+- Usage data (e.g., browser type, pages visited)
+
+How We Use Your Information:
+- To improve our services
+- To contact you regarding updates or promotions
+- To comply with legal obligations
+
+Your Rights:
+You have the right to access, correct, or delete your personal data. Please email us at ${email} for any requests.
+
+Consent:
+By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+
+Last updated: ${new Date().toLocaleDateString()}`;
+
+      document.getElementById('output').textContent = policy;
+    }
+  </script>
+</body>
+</html>
